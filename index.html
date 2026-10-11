@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Makes the website work on phones and computers -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Midnight Valley Typography</title>
+
+  <style>
+    /* Controls the background and text */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #111111;
+      color: white;
+      font-size: clamp(16px, 1.5vw + 10px, 20px);
+      line-height: 1.7;
+    }
+
+    /* Keeps the website centered */
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    /* Makes the main title resize with the screen */
+    h1 {
+      font-size: clamp(30px, 5vw, 58px);
+    }
+
+    /* Makes section titles responsive */
+    h2 {
+      font-size: clamp(24px, 3vw, 36px);
+      color: #d6b57a;
+    }
+
+    /* Makes card titles responsive */
+    h3 {
+      font-size: clamp(19px, 2vw, 26px);
+    }
+
+    /* Makes smaller text responsive */
+    .small {
+      font-size: clamp(14px, 1.2vw, 16px);
+      color: #cccccc;
+    }
+
+    /* Styles the top introduction */
+    .hero {
+      background: #222222;
+      padding: 25px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+    }
+
+    /* Arranges the cards in a grid */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    /* Gives each card its own box */
+    .card {
+      background: #222222;
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    /* Shows two cards per row on tablets */
+    @media (min-width: 700px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* Shows four cards per row on computers */
+    @media (min-width: 1000px) {
+      .grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    /* Styles the reflection section */
+    .reflection {
+      background: #222222;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 30px;
+    }
+
+    /* Styles the bottom of the page */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Holds all website content -->
+  <main class="container">
+
+    <!-- Main website introduction -->
+    <section class="hero">
+      <h1>Midnight Valley</h1>
+      <p>
+        Midnight Valley is a streetwear clothing brand.
+        We focus on quality, comfort, and modern fashion.
+      </p>
+      <p class="small">Streetwear | Fashion | Lifestyle</p>
+    </section>
+
+    <!-- Four cards showing different text sizes -->
+    <section>
+      <h2>Our Typography Specimen</h2>
+
+      <div class="grid">
+
+        <!-- Card 1: Information about the brand -->
+        <article class="card">
+          <h3>Our Brand</h3>
+          <p>
+            Midnight Valley is about creativity and style.
+            We make clothing that is comfortable and modern.
+            Our designs help people express themselves.
+          </p>
+          <p class="small">Brand Identity</p>
+        </article>
+
+        <!-- Card 2: Information about the products -->
+        <article class="card">
+          <h3>Our Clothing</h3>
+          <p>
+            We sell heavyweight shirts and sweatpants.
+            Our clothing uses quality materials.
+            We want our products to look good and last.
+          </p>
+          <p class="small">Streetwear Collection</p>
+        </article>
+
+        <!-- Card 3: Explains responsive text -->
+        <article class="card">
+          <h3>Responsive Design</h3>
+          <p>
+            This website uses clamp() to resize text.
+            Text stays readable on phones and computers.
+            The design changes based on screen size.
+          </p>
+          <p class="small">Web Design</p>
+        </article>
+
+        <!-- Card 4: Information about future goals -->
+        <article class="card">
+          <h3>Our Vision</h3>
+          <p>
+            Our goal is to grow Midnight Valley.
+            We want to create more clothing collections.
+            We hope to reach more customers in the future.
+          </p>
+          <p class="small">Future Goals</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Explains the font sizes and testing -->
+    <section class="reflection">
+      <h2>Reflection</h2>
+      <p>
+        I used clamp(30px, 5vw, 58px) for my H1 title.
+        The 30px keeps it readable on phones.
+        The 5vw helps it grow with the screen.
+        The 58px stops it from getting too big.
+        I also changed the other text sizes.
+        I tested my website on phone, tablet, and
+        desktop sizes to make sure everything looked good.
+      </p>
+    </section>
+
+    <!-- Bottom of the website -->
+    <footer>
+      <p class="small">
+        Created by Teodros | Module 6 Typography
+      </p>
+    </footer>
+
+  </main>
+</body>
+</html>
